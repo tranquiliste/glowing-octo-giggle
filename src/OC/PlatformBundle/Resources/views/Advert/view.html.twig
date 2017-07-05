@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>Bienvenue sur ma première page avec OpenClassrooms !</title>
+
+  </head>
+
+  <body>
+ <div>
+
+      {# On affiche tous les messages flash dont le nom est « info » #}
+
+      {% for message in app.session.flashbag.get('error') %}
+
+        <p>Message flash : {{ message }}</p>
+
+      {% endfor %}
+
+    </div>
+
+
+    <h1>Annonce {{id}}  !</h1>
+    <p> Tag : {{tag}}</p>
+
+    <p>
+      <a href="{{ path('oc_platform_home', { 'id': id }) }}">Retour à l'accueil</a>
+
+    </p>
+
+  </body>
+
+</html>

@@ -1,27 +1,15 @@
-<!DOCTYPE html>
 
-<html>
+{% extends "OCPlatformBundle::layout.html.twig" %}
 
-  <head>
+{% block title %}{{ parent() }} - Index{% endblock %}
 
-    <title>advert {{id}}</title>
 
-  </head>
-
-  <body>
+{% block body %}
 
     <h1>Hello {{nom}}  !</h1>
-
-
-    <p>
-
-  
+    <p> 
       Le Hello World est un grand classique en programmation.
-      <a href="{{ path('oc_platform_view', { 'id': id }) }}">
-
-    Lien vers l'annonce d'id {{ id }}
-
-</a>
+      <a href="{{ path('oc_platform_view', { 'id': id }) }}">Lien vers l'annonce d'id {{ id }}</a>
 
       Il signifie énormément, car cela veut dire que vous avez
 
@@ -30,7 +18,4 @@
       afficher ce hello world !
 
     </p>
-
-  </body>
-
-</html>
+{% endblock %}

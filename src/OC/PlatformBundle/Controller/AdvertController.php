@@ -31,7 +31,7 @@ class AdvertController extends Controller
     // Ici, on récupérera l'annonce correspondante à l'id $id
 
     return $this->render('OCPlatformBundle:Advert:view.html.twig', array(
-      'id' => $id
+      'id' => $id, 'tag' => 5
     ));
   }
 

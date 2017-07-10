@@ -13,8 +13,12 @@ services:
         # this means you cannot fetch services directly from the container via $container->get()
         # if you need to do this, you can override this setting on individual services
         public: false
-
-
+    oc_platform.antispam:
+        class: OC\PlatformBundle\Antispam\OCAntispam
+        arguments:
+            - "@mailer"
+            - %locale%
+            - 50
     # add more services, or override services that need manual wiring
     # AppBundle\Service\ExampleService:
     #     arguments:

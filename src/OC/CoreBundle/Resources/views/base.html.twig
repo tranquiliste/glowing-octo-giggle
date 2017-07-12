@@ -30,11 +30,19 @@
 
     <div class="row">
       <div id="menu" class="col-md-3">
-        <h3>Les annonces</h3>
+        <h3>OC Plateforme</h3>
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="{{ path('oc_platform_home') }}">Accueil</a></li>
-          <li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
+          <li><a href="{{ path('oc_core_homepage') }}">Accueil</a></li>
+          <li><a href="{{ path('oc_platform_home') }}">Les annonces</a></li>
+          <li><a href="#">Le Forum</a></li>
         </ul>
+        {# block réservé pour le menu des annonce#}
+        {% block menu_annonces %}
+        {% endblock %}
+        
+        {# block réservé pour le menu du forum#}
+        {% block menu_forum %}
+        {% endblock %}
 
         <h4>Dernières annonces</h4>
         {{ render(controller("OCPlatformBundle:Advert:menu", {'limit': 3})) }}

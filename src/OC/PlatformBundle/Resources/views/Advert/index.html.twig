@@ -5,6 +5,13 @@
   Accueil - {{ parent() }}
 {% endblock %}
 
+{% block menu_annonces %}
+    <h3>Annonces</h3>
+        <ul class="nav nav-pills nav-stacked">
+          <li><a href="{{ path('oc_platform_home') }}">Les annonces</a></li>
+          <li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>
+        </ul>
+{% endblock %}
 {% block ocplatform_body %}
   <h2>Liste des annonces</h2>
   <ul>
